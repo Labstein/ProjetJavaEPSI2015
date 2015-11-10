@@ -1,4 +1,4 @@
-package fr.epsi.model;
+package fr.epsi.util;
 
 import java.util.Random;
 
