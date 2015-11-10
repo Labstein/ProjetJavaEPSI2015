@@ -1,0 +1,20 @@
+EN GENERAL :
+
+Exceptions :
+Si JAMAIS il peut y avoir un cas non traité, il DOIT renvooyer une exception (i.e. si une caméra est vide quand on tente de l'afficher, par exemple).
+Prière de faire remonter l'exception ensuite.
+
+En attrapant une exception, il faut envoyer un message via System.err.println, pas System.out.println !
+
+POUR I/O :
+
+Instancier les caméras :
+-pour TOUTES les images (.png & .jpg) dans un dossier spécifique (à déterminer)
+-créer HashMap
+-ajouter à la HashMap nom du fichier (moins l'extension) + caméra créée à partir du fichier
+
+Map<String, Camera> lesCamera = new HashMap<String, Camera>();
+*un foreach ici*{ listeCamera.put(nom_image(moins extension), new Camera(image)); }
+return lesCamera;
+
+note:pour charger les images, regarder la classe javafx.image.Image
