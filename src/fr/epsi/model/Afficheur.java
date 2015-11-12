@@ -5,7 +5,12 @@ import java.util.List;
 public class Afficheur {
 	//Attributs
 	private Ecran[] tabEcran;
-	private List<Camera> listeCamera;
+	private static volatile  List<Camera> listeCamera;
+	//Accesseurs
+	public static List<Camera> getListeCamera(){
+		return listeCamera;
+		
+	}
 	//Constructeurs
 	public Afficheur(Ecran[] tabEcran, List<Camera> listeCamera){
 		this.tabEcran = tabEcran;
