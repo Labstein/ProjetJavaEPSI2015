@@ -14,3 +14,7 @@ Instancier les caméras :
 -ajouter à la List nom du fichier (moins l'extension) + image récupérée à partir du fichier (cf constructeur Caméra)
 
 note:pour charger les images, regarder la classe javafx.image.Image
+
+POUR THREAD :
+
+Un thread AfficherImageAlea, qui prend un temps et un écran (et la liste des caméras ; note : je préfèrerai les obtenir directement d'Afficheur) pour lancer la fonction affichage sur l'écran avec une image aléatoire tous les <temps spécifié>
