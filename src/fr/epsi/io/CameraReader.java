@@ -14,7 +14,6 @@ import javafx.scene.image.Image;
 
 public class CameraReader {
 	public static List<Camera> getAllCamera() throws IOException {
-		//TODO: message de debug ; à supprimer ultérieurement
 		System.out.println("[DEBUG] Working directory = " + new File("").getAbsolutePath().toString());
 		List<Camera> listeCamera = new ArrayList<Camera>();
 		Files.walk(Paths.get(".\\cameras")).forEach(filePath -> {
@@ -23,7 +22,7 @@ public class CameraReader {
 			        listeCamera.add(new Camera(new Image("file:" + filePath.toString()), filePath.getFileName().toString()));
 			        System.out.println("[DEBUG] Chargement du fichier " + filePath.toString() + filePath.getFileName().toString());
 		    	} catch(IllegalArgumentException e){
-		    		System.err.println("Impossibilité de charger le fichier caméra (" + filePath.getFileName().toString() + ")");
+		    		System.err.println("ImpossibilitÃ© de charger le fichier camÃ©ra (" + filePath.getFileName().toString() + ")");
 					e.printStackTrace();
 		    	}
 		    }
