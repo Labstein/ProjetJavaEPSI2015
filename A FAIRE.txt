@@ -9,3 +9,7 @@ En attrapant une exception, il faut envoyer un message via System.err.println, p
 POUR THREAD :
 
 Un thread AfficherImageAlea, qui prend un temps et un écran (et la liste des caméras ; note : je préfèrerai les obtenir directement d'Afficheur) pour lancer la fonction affichage sur l'écran avec une image aléatoire tous les <temps spécifié>
+
+POUR VIEW :
+
+Commencer à crer les interfaces et prévoir les controlleurs qui seront nécessaires
