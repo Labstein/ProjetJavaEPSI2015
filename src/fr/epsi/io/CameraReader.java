@@ -20,7 +20,7 @@ public class CameraReader {
 		    if (Files.isRegularFile(filePath)) {
 		    	try{
 			        listeCamera.add(new Camera(new Image("file:" + filePath.toString()), filePath.getFileName().toString()));
-			        System.out.println("[DEBUG] Chargement du fichier " + filePath.toString() + filePath.getFileName().toString());
+			        System.out.println("Chargement du fichier " + filePath.toString() + filePath.getFileName().toString());
 		    	} catch(IllegalArgumentException e){
 		    		System.err.println("Impossibilité de charger le fichier caméra (" + filePath.getFileName().toString() + ")");
 					e.printStackTrace();
