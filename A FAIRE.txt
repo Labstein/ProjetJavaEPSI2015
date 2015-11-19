@@ -1,7 +1,7 @@
 EN GENERAL :
 
 Exceptions :
-Si JAMAIS il peut y avoir un cas non traité, il DOIT renvooyer une exception (i.e. si une caméra est vide quand on tente de l'afficher, par exemple).
+Si JAMAIS il peut y avoir un cas non traité, il DOIT renvoyer une exception (i.e. si une caméra est vide quand on tente de l'afficher, par exemple).
 Prière de faire remonter l'exception ensuite.
 
 En attrapant une exception, il faut envoyer un message via System.err.println, pas System.out.println !
@@ -13,3 +13,7 @@ Un thread AfficherImageAlea, qui prend un temps et un écran (la liste des camé
 POUR VIEW :
 
 Commencer à crer les interfaces et prévoir les controlleurs qui seront nécessaires
+
+POUR LES CAMÉRAS :
+
+Le dossier des caméras devra rester en dehors du jar à terme.
