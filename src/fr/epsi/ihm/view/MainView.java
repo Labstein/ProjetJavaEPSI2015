@@ -19,10 +19,10 @@ public class MainView extends javafx.application.Application {
 		try {
 			Afficheur mainAfficheur = new Afficheur(new Ecran[NB_MAX_MONITEURS], new ArrayList<Camera>(CameraReader.getAllCamera()));
 		} catch (IOException e) {
-			System.err.println("ImpossibilitÃ© d'accÃ©der au dossier des fichiers camÃ©ra.");
+			System.err.println("Impossibilité d'accéder au dossier des fichiers caméra.");
 			e.printStackTrace();
 		}
-		System.out.println("Chargement des images achevÃ©");
+		System.out.println("Chargement des images achevé");
 		
 		
 		primaryStage.show();

@@ -1,5 +1,6 @@
 package fr.epsi.model;
 
+import fr.epsi.exception.NullCameraException;
 import javafx.scene.image.ImageView;
 
 public class Ecran {
@@ -40,11 +41,12 @@ public class Ecran {
 		this.modeAlea = modeAlea;
 	}
 	//Méthodes
-	public void afficherCamera(){
-		ecranAssocie.setImage(cameraCourante.getRenduCamera());
-	}
-	public void afficherCamera(Camera nouvelleCamera){
-		cameraCourante = nouvelleCamera;
-		ecranAssocie.setImage(nouvelleCamera.getRenduCamera());
+	public void afficherCamera(Camera nouvelleCamera)throws NullCameraException {
+		if(nouvelleCamera == null)
+			throw new NullCameraException();
+		else{
+			cameraCourante = nouvelleCamera;
+			ecranAssocie.setImage(nouvelleCamera.getRenduCamera());
+		}
 	}
 }

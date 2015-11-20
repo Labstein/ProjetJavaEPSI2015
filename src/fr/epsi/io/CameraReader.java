@@ -22,7 +22,7 @@ public class CameraReader {
 			        listeCamera.add(new Camera(new Image("file:" + filePath.toString()), filePath.getFileName().toString()));
 			        System.out.println("Chargement du fichier " + filePath.toString() + filePath.getFileName().toString());
 		    	} catch(IllegalArgumentException e){
-		    		System.err.println("ImpossibilitÃ© de charger le fichier camÃ©ra (" + filePath.getFileName().toString() + ")");
+		    		System.err.println("Impossibilité de charger le fichier caméra (" + filePath.getFileName().toString() + ")");
 					e.printStackTrace();
 		    	}
 		    }
