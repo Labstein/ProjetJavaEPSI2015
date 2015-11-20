@@ -1,16 +1,19 @@
 EN GENERAL :
 
 Exceptions :
-Si JAMAIS il peut y avoir un cas non traité, il DOIT renvooyer une exception (i.e. si une caméra est vide quand on tente de l'afficher, par exemple).
+Si JAMAIS il peut y avoir un cas non traité, il DOIT renvoyer une exception (i.e. si une caméra est vide quand on tente de l'afficher, par exemple).
 Prière de faire remonter l'exception ensuite.
 
 En attrapant une exception, il faut envoyer un message via System.err.println, pas System.out.println !
 
-POUR I/O :
+POUR THREAD :
 
-Instancier les caméras :
--pour TOUTES les images (.png & .jpg) dans un dossier spécifique (à déterminer)
--créer ArrayList
--ajouter à la List nom du fichier (moins l'extension) + image récupérée à partir du fichier (cf constructeur Caméra)
+Un thread AfficherImageAlea, qui prend un temps et un écran (la liste des caméras est disponible de manière statique pour tous les threads désormais) pour lancer la fonction affichage sur l'écran avec une image aléatoire tous les <temps spécifié>
 
-note:pour charger les images, regarder la classe javafx.image.Image
+POUR VIEW :
+
+Commencer à crer les interfaces et prévoir les controlleurs qui seront nécessaires
+
+POUR LES CAMÉRAS :
+
+Le dossier des caméras devra rester en dehors du jar à terme.
