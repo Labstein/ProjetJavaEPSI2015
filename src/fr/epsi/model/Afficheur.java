@@ -9,12 +9,11 @@ public class Afficheur {
 	//Accesseurs
 	public static List<Camera> getListeCamera(){
 		return listeCamera;
-		
 	}
 	//Constructeurs
 	public Afficheur(Ecran[] tabEcran, List<Camera> listeCamera){
 		this.tabEcran = tabEcran;
-		this.listeCamera = listeCamera;
+		Afficheur.listeCamera = listeCamera;
 	}
 	//Méthodes
 	

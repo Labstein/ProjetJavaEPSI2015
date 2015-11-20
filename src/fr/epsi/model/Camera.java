@@ -20,7 +20,6 @@ public class Camera {
 		this.nomCamera = nomCamera;
 	}
 	//Constructeurs
-	//Note : si un renduCamera n'est pas associé ultérieurement, une exception devra être levée lors du traitement
 	public Camera(){
 		this.renduCamera = null;
 		this.nomCamera = "";

@@ -8,7 +8,7 @@ En attrapant une exception, il faut envoyer un message via System.err.println, p
 
 POUR THREAD :
 
-Un thread AfficherImageAlea, qui prend un temps et un écran (la liste des caméras est disponible de maniÃ¨re statique pour tous les threads dÃ©sormais) pour lancer la fonction affichage sur l'Ã©cran avec une image alÃ©atoire tous les <temps spÃ©cifiÃ©>
+Un thread AfficherImageAlea, qui prend un temps et un écran (la liste des caméras est disponible de manière statique pour tous les threads désormais) pour lancer la fonction affichage sur l'écran avec une image aléatoire tous les <temps spécifié>
 
 POUR VIEW :
 
