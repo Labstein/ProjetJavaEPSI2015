@@ -1,5 +1,6 @@
 package fr.epsi.model.thread;
-import fr.epsi.util.Alea;
+import java.util.concurrent.ThreadLocalRandom;
+
 import fr.epsi.exception.NullCameraException;
 import fr.epsi.model.Afficheur;
 import fr.epsi.model.Camera;
@@ -15,9 +16,9 @@ public class ThreadImageAlea implements Runnable {
 		this.tempsAlea = temps;
 	}
 	/*
-	Lancer le thread avec :
-	Runnable r = new ThreadImageAlea(ecran, temps);
-	new Thread(r).start();
+	Lancer un thread avec :
+		new Thread(new ThreadImageAlea(ecran, temps)).start();
+	L'index d'un thread dans tabThread est censé correspondre à l'index de son écran associé dans tabEcran
 	 */
 	public void run(){
 		while (true) {
@@ -39,6 +40,6 @@ public class ThreadImageAlea implements Runnable {
 	}
 	
 	public Camera choixCameraAlea(){
-		return Afficheur.getListeCamera().get(Alea.nbRandom(0, Afficheur.getListeCamera().size()));
+		return Afficheur.getListeCamera().get(ThreadLocalRandom.current().nextInt(0, Afficheur.getListeCamera().size()));
 	}
 }

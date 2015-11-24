@@ -16,8 +16,10 @@ public class CameraReader {
 	public static List<Camera> getAllCamera() throws IOException {
 		System.out.println("[DEBUG] Working directory = " + new File("").getAbsolutePath().toString());
 		List<Camera> listeCamera = new ArrayList<Camera>();
+		//Lecture de tous les fichiers dans le dossier "cameras"
 		Files.walk(Paths.get(".\\cameras")).forEach(filePath -> {
 		    if (Files.isRegularFile(filePath)) {
+		    	//Si les fichiers sont des images valides, elles sont ajoutées à la liste
 		    	try{
 			        listeCamera.add(new Camera(new Image("file:" + filePath.toString()), filePath.getFileName().toString()));
 			        System.out.println("Chargement du fichier " + filePath.toString() + filePath.getFileName().toString());

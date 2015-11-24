@@ -34,12 +34,6 @@ public class Ecran {
 		cameraCourante = null;
 		modeAlea = false;
 	}
-	//Ne devrait théoriquement être utilisé que pour lancer l'écran en mode aléatoire. 
-	public Ecran(ImageView ecranAssocie, boolean modeAlea){
-		this.ecranAssocie = ecranAssocie;
-		cameraCourante = null;
-		this.modeAlea = modeAlea;
-	}
 	//Méthodes
 	public void afficherCamera(Camera nouvelleCamera)throws NullCameraException {
 		if(nouvelleCamera == null)
