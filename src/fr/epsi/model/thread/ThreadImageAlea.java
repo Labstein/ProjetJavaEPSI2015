@@ -10,18 +10,19 @@ public class ThreadImageAlea implements Runnable {
 	private Ecran ecranGere;
 	//Représente le temps en millisecondes entre le choix de deux images aléatoires
 	private int tempsAlea;
+	boolean continuer;
 	//Constructeur
 	public ThreadImageAlea(Ecran ecran, int temps){
 		this.ecranGere = ecran;
 		this.tempsAlea = temps;
+		this.continuer = true;
 	}
 	/*
 	Lancer un thread avec :
 		new Thread(new ThreadImageAlea(ecran, temps)).start();
-	L'index d'un thread dans tabThread est censé correspondre à l'index de son écran associé dans tabEcran
-	 */
+	*/
 	public void run(){
-		while (true) {
+		while (continuer) {
 			//Afficher une image aléatoire
 			try {
 				ecranGere.afficherCamera(choixCameraAlea());
@@ -29,14 +30,18 @@ public class ThreadImageAlea implements Runnable {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			//Attendre et recommencer
+			//Attendre
 			try {
 				Thread.sleep(tempsAlea);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			//Recommencer si on en a le droit
+			if(!ecranGere.isModeAlea())
+				continuer = false;
 		}
+		return;
 	}
 	
 	public Camera choixCameraAlea(){
