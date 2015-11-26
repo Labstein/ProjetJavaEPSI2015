@@ -22,7 +22,7 @@ public class CameraReader {
 		    	//Si les fichiers sont des images valides, elles sont ajoutées à la liste
 		    	try{
 			        listeCamera.add(new Camera(new Image("file:" + filePath.toString()), filePath.getFileName().toString()));
-			        System.out.println("Chargement du fichier " + filePath.toString() + filePath.getFileName().toString());
+			        System.out.println("Chargement du fichier " + filePath.getFileName().toString());
 		    	} catch(IllegalArgumentException e){
 		    		System.err.println("Impossibilité de charger le fichier caméra (" + filePath.getFileName().toString() + ")");
 					e.printStackTrace();
