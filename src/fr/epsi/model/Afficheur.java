@@ -1,8 +1,10 @@
 package fr.epsi.model;
 
 import java.util.List;
+import java.util.Observable;
 
-public class Afficheur {
+
+public class Afficheur extends Observable{
 	//Attributs
 	private Ecran[] tabEcran;
 	private static volatile  List<Camera> listeCamera;

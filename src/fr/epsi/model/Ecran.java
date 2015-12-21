@@ -1,9 +1,11 @@
 package fr.epsi.model;
 
+import java.util.Observable;
+
 import fr.epsi.exception.NullCameraException;
 import javafx.scene.image.ImageView;
 
-public class Ecran {
+public class Ecran extends Observable {
 	//Attributs
 	private ImageView ecranAssocie;
 	private Camera cameraCourante;

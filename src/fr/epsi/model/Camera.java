@@ -1,8 +1,10 @@
 package fr.epsi.model;
 
+import java.util.Observable;
 import javafx.scene.image.Image;
 
-public class Camera {
+
+public class Camera extends Observable{
 	//Attributs
 	private Image renduCamera;
 	private String nomCamera;
